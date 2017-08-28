@@ -8,7 +8,7 @@ const client = new CommandoClient({
 	disableEveryone: true,
 	unknownCommandResponse: false,
 	disabledEvents: ['TYPING_START'],
-	messageCacheLifetime: 60,
+	messageCacheLifetime: 600,
 	messageSweepInterval: 120
 });
 const { carbon, dBots, dBotsOrg, filterTopics, parseTopic } = require('./structures/Util');
