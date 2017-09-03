@@ -40,7 +40,7 @@ client.registry
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 
 client.on('ready', () => {
-	console.log(`[READY] Shard ${client.shard.id} logged in as ${client.user.tag} (${client.user.id})!`);
+	console.log(`[READY] Shard ${client.shard.id} logged in as ${client.user.tag} (${client.user.id})!`, { type: 0 });
 	client.user.setActivity(`${COMMAND_PREFIX}help | Shard ${client.shard.id}`);
 });
 
