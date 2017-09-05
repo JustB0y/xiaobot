@@ -12,6 +12,8 @@ class XiaoCommand extends Command {
 	}
 
 	hasPermission(msg) {
+		const baseCheck = super.hasPermission(msg);
+		if (!baseCheck || typeof baseCheck === 'string') return baseCheck;
 		if (this.ownerOnly && !this.client.isOwner(msg.author)) {
 			return `The \`${this.name}\` command can only be used by the bot owner.`;
 		}
