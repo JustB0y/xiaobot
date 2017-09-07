@@ -97,4 +97,7 @@ client.on('guildDelete', async guild => {
 
 client.login(TOKEN);
 
-process.on('unhandledRejection', console.error);
+process.on('unhandledRejection', err => {
+	console.error('Unhandled Promise Rejection:', err);
+	process.exit(1);
+});
