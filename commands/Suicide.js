@@ -1,13 +1,13 @@
 const Command = require('../../structures/Command');
 const { stripIndents } = require('common-tags');
 
-module.exports = class KillCommand extends Command {
+module.exports = class SuicideCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'kill',
+			name: 'Suicide',
 			group: 'roleplay',
-			memberName: 'kill',
-			description: 'Kills a user.',
+			memberName: 'Suicide',
+			description: 'Kill yourself.',
 			args: [
 				{
 					key: 'user',
@@ -21,7 +21,7 @@ module.exports = class KillCommand extends Command {
 	run(msg, args) {
 		const { user } = args;
 		return msg.say(stripIndents`
-			**${msg.author.username}** *kills* **${user.username}**
+			**${msg.author.username}** *kills* **${user.author.username}**
 			https://i.imgur.com/WxD4XMe.gif
 		`);
 	}
