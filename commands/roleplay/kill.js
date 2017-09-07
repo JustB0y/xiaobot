@@ -4,10 +4,10 @@ const { stripIndents } = require('common-tags');
 module.exports = class KillCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'kill',
+			name: 'Suicide',
 			group: 'roleplay',
-			memberName: 'kill',
-			description: 'Kills a user.',
+			memberName: 'Suicide',
+			description: 'Kill!.',
 			args: [
 				{
 					key: 'user',
